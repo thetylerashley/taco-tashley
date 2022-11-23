@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from './footer';
+import Header from './header';
 
 const name = 'Tyler Ashley';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Tyler Ashley Co';
 
 export default function Layout({ children, home }) {
   return (
@@ -23,8 +25,8 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="text-3xl font-bold text-gray-700">
-        {home ? (
+        <Header />
+        {/* {home ? (
           <>
             <Image
               priority
@@ -54,14 +56,21 @@ export default function Layout({ children, home }) {
               </Link>
             </h2>
           </>
-        )}
-      </header>
+        )} */}
       <main>{children}</main>
-      {!home && (
+      {home ? (
+          <></>
+        ) : (
+          <div className="">
+            <Link href="/">← Back to home</Link>
+          </div>
+          )}
+      {/* {!home && (
         <div className="">
           <Link href="/">← Back to home</Link>
         </div>
-      )}
+      )} */}
+    <div><Footer /></div>
     </div>
   );
 }
