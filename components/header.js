@@ -1,4 +1,5 @@
-import Link from 'next/Link';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const navigation = [
     { name: 'About', href: 'about' },
@@ -15,7 +16,7 @@ return (
         <div className="flex items-center">
             <a href="#">
                 <span className="sr-only">Your Company</span>
-                <img className="h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="" />
+                <Image className="h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="" />
             </a>
             <div className="ml-10 hidden space-x-8 lg:block">
             {navigation.map((link) => (
