@@ -16,7 +16,7 @@ return (
         <div className="flex items-center">
             <a href="#">
                 <span className="sr-only">Your Company</span>
-                <Image className="h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="" />
+                <Image width={47} height={40} className="h-10 w-auto" src="/images/tw-mark.svg" alt="" />
             </a>
             <div className="ml-10 hidden space-x-8 lg:block">
             {navigation.map((link) => (
