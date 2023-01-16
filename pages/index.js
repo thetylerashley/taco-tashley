@@ -49,7 +49,10 @@ import Date from '../components/date';
 export default function Home() {
   return (
     <Layout home>
-    <h2 className="">Homepage</h2>
+      <div className="flex items-center flex-col py-24">
+        <h2 className="text-3xl text-center py-12">Something Cool is Coming!</h2>
+        <p className="text-center text-lg max-w-sm">If you are looking to get in touch, you can reach me at <a href="mailto:contact@tylerashley.com" className="text-[#2C7D77]">contact@tylerashley.com</a></p>
+      </div>
     </Layout>
   );
 }
